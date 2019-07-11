@@ -1,30 +1,39 @@
 {% extends 'base.html' %}
-{% from 'bootstrap/form.html' import render_form %}
+
+{% block title %} 星愿便利屋 | 白日梦 | 我的代码日记 {% endblock %}
 
 {% block content %}
-    <div class="hello-form">
-        {{ render_form(form, action=request.full_path) }}
+
+    <div class="row">
+    <form class="col s12" method="POST">
+      <div class="row">
+        <div class="input-field col s8">
+          {{ form.csrf_token }}
+          <b><div class="saydream">
+              {{ form.body(class="materialize-textarea", id="textarea1", autocomplete="off") }}
+          </div></b>
+        </div>  
+        <div class="input-field col s4 saydream2"> 
+          {{ form.submit(class="waves-effect waves-light btn start") }}
+        </div>
+          <br>
+          {% for error in form.body.errors %}
+            <small class="error">{{ error }}</small><br>
+          {% endfor %}
+      </div>
+    </form>
     </div>
-    <h5>{{ messages|length }} 件星愿
-        <small class="float-right">
-            <a href="#bottom" title="Go Bottom">&darr;</a>
-        </small>
+
+    <h5 class="text-center">{{ messages|length }} 件星愿
     </h5>
     <div class="list-group">
         {% for message in messages %}
-            <a class="list-group-item list-group-item-action flex-column">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1 text-success">{{ message.name }}
-                        <small class="text-muted"> #{{ loop.revindex }}</small>
-                    </h5>
-                    <small data-toggle="tooltip" data-placement="top"
-                           data-timestamp="{{ message.timestamp.strftime('%Y-%m-%dT%H:%M:%SZ') }}"
-                           data-delay="500">
-                        {{ moment(message.timestamp).fromNow(refresh=True) }}
-                    </small>
-                </div>
-                <p class="mb-1">{{ message.body }}</p>
-            </a>
+            <div class="row item card-panel hoverable">
+              <h5>{{ message.user.nickname }}
+              <small> #{{ loop.revindex }}</small>
+              </h5>
+              <p>{{ message.body }}</p>
+            </div>
         {% endfor %}
     </div>
 {% endblock %}

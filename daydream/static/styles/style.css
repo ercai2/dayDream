@@ -50,11 +50,20 @@
   text-align: center;
 }
 
+.form-group {
+    margin-bottom: 1rem;
+    display: inline-flex;
+}
+
 .nickname-input {
-  margin-left: 2px;
-  border-radius: 30px;
-  border-color: black;
-  text-align: center;
+  display: inline-block !important;
+  font-family: fzmw;
+  border-radius: 30px !important;
+  border-color: black !important;
+  text-align: center !important;
+  background-color: white;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .start {
@@ -65,6 +74,15 @@
 
 input:focus {
     outline: none;
+}
+
+footer {
+    font-family: fzmw;
+    text-align: center;
+}
+
+.error {
+  color: red;
 }
 
 @media (max-width: 630px){

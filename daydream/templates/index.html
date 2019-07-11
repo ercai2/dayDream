@@ -24,13 +24,20 @@
     <div id='timer'></div>
 
     <form method="POST" class="form-nickname">
-      <div class="form-group"><b>
-        <label for="nickname">昵称: </label>
-        <input type="text" name="nickname" class="nickname-input" autocomplete="off">
-        <input type="submit" name="submit" value="开始" class="start"></b>
-      </div>
+      {{ form.csrf_token }}
+      <b><div class="form-group nickname-input">
+        {{ form.nickname.label }}
+        {{ form.nickname(class="nickname-input", autocomplete="off") }}
+        {{ form.submit(class="start") }}
+      </div></b>
+      
+      <br>
+      {% for error in form.nickname.errors %}
+        <small class="error">{{ error }}</small><br>
+      {% endfor %}
+    </form>
 
-    <br />
+    <br>
     <footer>
         <small>&copy; 2019 <a href="https://weibo.com/u/6240400685">ErCai</a></small>
     </footer>

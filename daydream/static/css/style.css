@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'fzmw';
+  src: url('FZMiaoWuJW.TTF');
+}
+
 body {
-    background-color: rgb(245, 245, 245) !important;
+    font-family: fzmw !important;
 }
 
 p {
@@ -40,4 +45,28 @@ header a {
 
 footer {
     margin: 20px;
+}
+
+.saydream {
+    margin-top: 18px;
+}
+.saydream2 {
+    margin-top: 38px;
+}
+
+.waves-effect input[type="button"], .waves-effect input[type="reset"], .waves-effect input[type="submit"] {
+    border: 0;
+    font-style: normal;
+    font-size: inherit;
+    text-transform: inherit;
+    background: none;
+    color: white;
+}
+
+.card {
+    background-color: black;
+}
+
+.text-center {
+    text-align: center;
 }
