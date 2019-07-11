@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+  <head lang="zh-CN">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="{{ url_for('static', filename='images/pokeball.ico') }}">
+    <script src="{{ url_for('static', filename='scripts/main.js') }}" async></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" type="text/css">
+    <title> 白日梦 | dayDream | 我的代码日记 | codingDiary </title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div id="loadingDiv" style="display: block; ">
+        <div id="over" style=" position: absolute;top: 0;left: 0; width: 100%;height: 100%; background-color: #FFFFFF;z-index: 1000;"></div>
+        <div id="layout" style="position: absolute; top: 20%; left: 32%; z-index: 1001;text-align:center;display: block;margin: 0 auto" class="loading0"><img src="{{ url_for('static', filename='images/loading.gif') }}" / class="loading"></div>
+      </div>
+      <img src="{{ url_for('static', filename='images/jupyter_white.jpg') }}" class="jupyter" alt="jupyter">
+    </div>
+
+    <div class="kaoyan"><b style="color: #0099CC">考 </b><b style="color: #CC99CC">研 </b><b style="color: #FF6666">倒 </b><b style="color: #FFCC99">计 </b><b style="color: #99CC66">时</b></div>
+    <div id='timer'></div>
+
+    <form method="POST" class="form-nickname">
+      <div class="form-group"><b>
+        <label for="nickname">昵称: </label>
+        <input type="text" name="nickname" class="nickname-input" autocomplete="off">
+        <input type="submit" name="submit" value="开始" class="start"></b>
+      </div>
+
+    <br />
+    <footer>
+        <small>&copy; 2019 <a href="https://weibo.com/u/6240400685">ErCai</a></small>
+    </footer>
+  </body>
+
+</html>

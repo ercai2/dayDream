@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'fzmw';
+  src: url('FZMiaoWuJW.TTF');
+}
+
+@font-face {
+  font-family: 'fzxs';
+  src: url('FZJCXS.TTF');
+}
+
+.jupyter {
+  width: 28%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.loading {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.index_head {
+  font-family: fzmw;
+  text-align: center;
+}
+
+#timer {
+  font-family: fzxs;
+  text-align: center;
+  font-size: 68px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+.kaoyan {
+  font-family: fzmw;
+  font-size: 28px;
+  text-align: center;
+  padding-top: 28px;
+
+}
+
+.form-nickname {
+  font-family: fzmw;
+  text-align: center;
+}
+
+.nickname-input {
+  margin-left: 2px;
+  border-radius: 30px;
+  border-color: black;
+  text-align: center;
+}
+
+.start {
+  border-radius: 30px;
+  border-color: black;
+  background-color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+@media (max-width: 630px){
+  .jupyter {
+    width: 75%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  .loading0 {
+    left: 0% !important;
+  }
+
+  #timer {
+    font-family: fzxs;
+    text-align: center;
+    font-size: 52px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+}
